@@ -1,0 +1,24 @@
+resources:
+  schemas:
+    bronze_schema:
+      name: bronze
+      catalog_name: learning
+      comment: "Raw ingested data, minimal transformation"
+
+    silver_schema:
+      name: silver
+      catalog_name: learning
+      comment: "Cleaned, deduplicated data"
+
+    gold_schema:
+      name: gold
+      catalog_name: learning
+      comment: "Business-level aggregates"
+
+  volumes:
+    raw_files_volume:
+      catalog_name: learning
+      schema_name: bronze
+      name: raw_files
+      volume_type: MANAGED
+      comment: "Landing zone for incoming CSV files"

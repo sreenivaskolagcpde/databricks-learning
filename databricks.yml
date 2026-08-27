@@ -1,0 +1,11 @@
+bundle:
+  name: databricks-learning
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    workspace:
+      host: https://dbc-ac048a46-d8df.cloud.databricks.com
+    default: true
